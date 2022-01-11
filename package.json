@@ -1,0 +1,25 @@
+{
+    "name": "gen-language-highlighter",
+    "displayName": "Gen Language Highlighter",
+    "description": "The Highlighter for Gen Programming Language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "gen",
+            "aliases": ["Gen", "gen"],
+            "extensions": [".gen"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "gen",
+            "scopeName": "source.gen",
+            "path": "./syntaxes/gen.tmLanguage.json"
+        }]
+    }
+}
