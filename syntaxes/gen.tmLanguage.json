@@ -7,13 +7,16 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#numeric"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.gen",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(var|or|and|not|if|elseif|else|for|through|step|while)\\b"
 			}]
 		},
 		"strings": {
@@ -24,6 +27,14 @@
 				{
 					"name": "constant.character.escape.gen",
 					"match": "\\\\."
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric.gen"
+					"match": "\\b(0x[0-9a-fA-F]+|[0-9]+(\\.[0-9]+)?)\\b"
 				}
 			]
 		}
