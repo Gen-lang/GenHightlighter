@@ -1,19 +1,34 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Gen",
+	"name": "Gen Programming Language",
 	"patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#numeric"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#types"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.gen",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(or|and|not|if|elseif|then|else|for|through|step|while|defunc|end|return|continue|break)\\b"
 			}]
 		},
 		"strings": {
@@ -26,6 +41,36 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"numeric": {
+			"patterns": [{
+				"name": "constant.numeric.gen",
+				"match": "\\b(0x[0-9a-fA-F]+|[0-9]+(\\.[0-9]+)?)\\b"
+			}]
+		},
+		"boolean": {
+			"patterns": [{
+				"name": "constant.language.boolean.gen",
+				"match": "\\b(true|false)\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.number-sign.gen",
+				"match": "#"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "entity.name.tag.gen",
+				"match": "\\b(println|print|input|int_input|absolute_number_of|is_number|Pi|is_string|is_array|is_function|exit_program|size|typeof|int|float|string|chars)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "entity.name.type.genl",
+				"match": "\\b(int|float|string|null)\\b"
+			}]
 		}
 	},
 	"scopeName": "source.gen"
