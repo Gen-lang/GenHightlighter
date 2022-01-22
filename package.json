@@ -10,6 +10,11 @@
         "Programming Languages"
     ],
     "contributes": {
+        "languages": [{
+            "id": "gen",
+            "extensions": [".gen"],
+            "configuration": "./language-configuration.json"
+        }],
         "grammars": [{
             "language": "gen",
             "scopeName": "source.gen",
